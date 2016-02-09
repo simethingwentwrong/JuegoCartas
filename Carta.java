@@ -7,8 +7,9 @@
  */
 public class Carta
 {
-    // instance variables - replace the example below with your own
+    // valor que tomara la carta
     private int valor;
+    // palo que tiene la carta
     private String palo;
 
     /**
@@ -16,10 +17,9 @@ public class Carta
      */
     public Carta(int valor, String palo)
     {
-        // initialise instance variables
         this.valor = valor;
         this.palo = palo;
-        
+
     }
 
     /**
@@ -27,10 +27,30 @@ public class Carta
      */
     public void getNombre()
     {
-        // put your code here
-        System.out.println( valor + " de " + palo);
+
+        if(valor == 1)
+        {
+            System.out.println( "A de " + palo); 
+        }
+        else if(valor == 11)
+        {
+            System.out.println( "J de " + palo);
+        }
+        else if(valor == 12)
+        {
+            System.out.println( "Q de " + palo);
+        }
+        else if(valor == 13)
+        {
+            System.out.println( "K de " + palo);
+        }
+        else
+        {
+            System.out.println( valor + " de " + palo);
+        }
+
     }
-    
+
     /**
      * retorna un entero con el valor correspondiente a la carta 
      */
@@ -38,7 +58,7 @@ public class Carta
     {
         return valor;
     }
-    
+
     /**
      *  retorna una cadena que contiene el palo correspondiente a la carta
      */
