@@ -25,29 +25,30 @@ public class Carta
     /**
      *  devuelve una cadena con el nombre de la carta.
      */
-    public void getNombre()
+    public String getNombre()
     {
-
+        String nombre;
         if(valor == 1)
         {
-            System.out.println( "A de " + palo); 
+            nombre = ( "A de " + palo); 
         }
         else if(valor == 11)
         {
-            System.out.println( "J de " + palo);
+            nombre = ( "J de " + palo);
         }
         else if(valor == 12)
         {
-            System.out.println( "Q de " + palo);
+            nombre = ( "Q de " + palo);
         }
         else if(valor == 13)
         {
-            System.out.println( "K de " + palo);
+            nombre = ( "K de " + palo);
         }
         else
         {
-            System.out.println( valor + " de " + palo);
+            nombre = ( valor + " de " + palo);
         }
+        return nombre;
 
     }
 

@@ -22,10 +22,11 @@ public class Jugador
         int index = 0;
         this.id= id;
         cartas = new Mazo();
-        cartasDelJugador = null;
+        cartasDelJugador = new ArrayList<>();
         index++;
         cartas.barajar();
         numeroDeCartas = 0;
+        
     }
 
     /**
@@ -46,8 +47,8 @@ public class Jugador
     /**
      * Método que le permite al jugador recibir una carta
      */
-    public void recibirCarta(){
-       cartasDelJugador.add(cartas.tomarPrimera());
+    public void recibirCarta(Carta unaCarta){
+       cartasDelJugador.add(unaCarta);
        numeroDeCartas++;
     }
     
